@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E484F355-4445-4AB9-B17E-1429072A2A45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HdSimpleMatrial</RootNamespace>
+    <AssemblyName>HdSimpleMatrial</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>key.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ProjectInfo.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\ProductPlan.cs" />
+    <Compile Include="Entity\SheetList.cs" />
+    <Compile Include="Entity\ProductDeliver.cs" />
+    <Compile Include="Entity\材料\Parts.cs" />
+    <Compile Include="Entity\材料\Plate.cs" />
+    <Compile Include="Entity\材料\Profile.cs" />
+    <Compile Include="XMLHelper.cs" />
+    <Compile Include="公共模块\frmProjectSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="公共模块\frmProjectSelect.designer.cs">
+      <DependentUpon>frmProjectSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="公共模块\frmAddPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="公共模块\frmAddPlanning.designer.cs">
+      <DependentUpon>frmAddPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加工单\frmPlanningList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加工单\frmPlanningList.designer.cs">
+      <DependentUpon>frmPlanningList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="导入数据\frmColumsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="导入数据\frmColumsSet.designer.cs">
+      <DependentUpon>frmColumsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="导入数据\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="导入数据\frmImport.designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="成品出库\frmWarehouseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="成品出库\frmWarehouseList.designer.cs">
+      <DependentUpon>frmWarehouseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="成品出库\frmWarehouseMxSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="成品出库\frmWarehouseMxSelect.designer.cs">
+      <DependentUpon>frmWarehouseMxSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="材料入库\frmMaritalPlanningList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="材料入库\frmMaritalPlanningList.Designer.cs">
+      <DependentUpon>frmMaritalPlanningList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="材料出库\frmMaritalWarehouseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="材料出库\frmMaritalWarehouseList.Designer.cs">
+      <DependentUpon>frmMaritalWarehouseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="材料出库\frmMaritalWarehouseMxSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="材料出库\frmMaritalWarehouseMxSelect.Designer.cs">
+      <DependentUpon>frmMaritalWarehouseMxSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="查询\frmJoinQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="查询\frmJoinQuery.Designer.cs">
+      <DependentUpon>frmJoinQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="查询\frmQueryItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="查询\frmQueryItems.Designer.cs">
+      <DependentUpon>frmQueryItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统管理\frmProjectEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统管理\frmProjectEdit.designer.cs">
+      <DependentUpon>frmProjectEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统管理\frmProjectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统管理\frmProjectList.designer.cs">
+      <DependentUpon>frmProjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统管理\frmUserPassChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统管理\frmUserPassChange.Designer.cs">
+      <DependentUpon>frmUserPassChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统管理\frmUserPassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统管理\frmUserPassEdit.designer.cs">
+      <DependentUpon>frmUserPassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统管理\frmUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统管理\frmUserEdit.designer.cs">
+      <DependentUpon>frmUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="公共模块\ModelConvertHelper.cs" />
+    <Compile Include="Entity\DbInterface.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="公共模块\frmwaitOperating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="公共模块\frmwaitOperating.designer.cs">
+      <DependentUpon>frmwaitOperating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="公共模块\HDModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="系统管理\frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统管理\frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="公共模块\frmProjectSelect.resx">
+      <DependentUpon>frmProjectSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="公共模块\frmAddPlanning.resx">
+      <DependentUpon>frmAddPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加工单\frmPlanningList.resx">
+      <DependentUpon>frmPlanningList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="导入数据\frmColumsSet.resx">
+      <DependentUpon>frmColumsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="导入数据\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="成品出库\frmWarehouseList.resx">
+      <DependentUpon>frmWarehouseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="成品出库\frmWarehouseMxSelect.resx">
+      <DependentUpon>frmWarehouseMxSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="材料入库\frmMaritalPlanningList.resx">
+      <DependentUpon>frmMaritalPlanningList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="材料出库\frmMaritalWarehouseList.resx">
+      <DependentUpon>frmMaritalWarehouseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="材料出库\frmMaritalWarehouseMxSelect.resx">
+      <DependentUpon>frmMaritalWarehouseMxSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="查询\frmJoinQuery.resx">
+      <DependentUpon>frmJoinQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="查询\frmQueryItems.resx">
+      <DependentUpon>frmQueryItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统管理\frmProjectEdit.resx">
+      <DependentUpon>frmProjectEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统管理\frmProjectList.resx">
+      <DependentUpon>frmProjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统管理\frmUserPassChange.resx">
+      <DependentUpon>frmUserPassChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统管理\frmUserPassEdit.resx">
+      <DependentUpon>frmUserPassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统管理\frmUserEdit.resx">
+      <DependentUpon>frmUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="公共模块\frmwaitOperating.resx">
+      <DependentUpon>frmwaitOperating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统管理\frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IhdMatrialSQLite\IhdMatrialSQLite.csproj">
+      <Project>{136bc7fd-e101-41c7-a597-6cdf3c16c90a}</Project>
+      <Name>IhdMatrialSQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\QQdoc\361085265\FileRecv\ProductManger\BQPrintDLL\BQPrintDLL.csproj">
+      <Project>{819d2370-7b46-4fde-b199-1c101bddb6fa}</Project>
+      <Name>BQPrintDLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="key.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

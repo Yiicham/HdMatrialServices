@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<HVMProject version ="2">
+    <Assemblies>
+        <assembly>
+            <path>..\HdSimpleMatrial\HdSimpleMatrial\bin\Debug\HdSimpleMatrial.exe</path>
+            <obfuscate>true</obfuscate>
+        </assembly>
+        <assembly>
+            <path>..\HdSimpleMatrial\HdSimpleMatrial\bin\Debug\BQPrintDLL.dll</path>
+            <obfuscate>true</obfuscate>
+        </assembly>
+        <assembly>
+            <path>..\HdSimpleMatrial\HdSimpleMatrial\bin\Debug\IhdMatrialSQLite.dll</path>
+            <obfuscate>true</obfuscate>
+        </assembly>
+        <assembly>
+            <path>..\HdMatrialServices\bin\Debug\HdMatrialServices.exe</path>
+            <obfuscate>true</obfuscate>
+        </assembly>
+    </Assemblies>
+    <Output>
+        <path>.\安装源文件</path>
+        <runtime>HVMRuntm.dll</runtime>
+        <runtime64>HVMRun64.dll</runtime64>
+    </Output>
+    <Settings>
+        <EncryptNew>true</EncryptNew>
+        <EncryptBlob>true</EncryptBlob>
+        <AntiDis>true</AntiDis>
+        <Level>3</Level>
+        <AntiTrace>true</AntiTrace>
+    </Settings>
+    <Obfuscation>
+        <ObILCode>true</ObILCode>
+        <RenameMode>0</RenameMode>
+    </Obfuscation>
+    <TrialSettings>
+        <EnableTrial>true</EnableTrial>
+        <TrialDate>1514731755</TrialDate>
+        <TrialDays>300</TrialDays>
+    </TrialSettings>
+</HVMProject>
