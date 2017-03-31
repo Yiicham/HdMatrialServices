@@ -40,5 +40,8 @@ namespace IhdMatrialSQLite
         /// <returns></returns>
         [OperationContract]
         object ExecuteScalar(int dbID, string SQL);
+
+        [OperationContract]
+        DataTable StockQuery(int dbID);
     }
 }

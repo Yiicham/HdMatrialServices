@@ -137,6 +137,7 @@ namespace HdSimpleMatrial
                         dt1 = myFile.ExecuteQuery(HDModel.dbVerID, sql);
                         sql = "SELECT * FROM " + _Contains2;
                         dt2 = myFile.ExecuteQuery(HDModel.dbVerID, sql);
+                        //DataTable tdt = myFile.StockQuery(HDModel.dbVerID);
                     }
                 }
                 var sheetList = ModelConvertHelper<SheetList>.ConvertToModel(dt);
